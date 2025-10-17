@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plate-It! — Recipes</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body onload="loadRecipePage()">
+    <header class="main-header">
+      <div class="header-container">
+        <a href="index.html" class="logo-link">
+          <img src="images/FigmaLogo.png" alt="Plate-It Logo" class="top-logo">
+        </a>
+        <nav class="nav-center">
+          <a href="index.html">Home</a>
+          <a href="recipes.html" class="active">Recipes</a>
+          <a href="about.html">About</a>
+        </nav> 
+        <div class="nav-buttons">
+          <a href="add.html" class="add-btn">Add Recipe</a>
+          <button class="surprise-btn" onclick="surpriseMe()">Surprise Me!</button>
+        </div>
+      </div>
+    </header>
+
+  <section class="recipes-page">
+    <h1>Explore Our Recipes</h1>
+    <div class="recipe-grid scrollable" id="recipe-grid"></div>
+
+    <div class="pagination">
+      <button id="prevBtn" onclick="changePage(-1)">⟨ Prev</button>
+      <div id="page-buttons" class="page-numbers"></div>
+      <button id="nextBtn" onclick="changePage(1)">Next ⟩</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>Plate-It! | © 2025 Plate-It! | Facebook • Instagram • Twitter | Images belong to their rightful owners</p>
+  </footer>
+</body>
+</html>

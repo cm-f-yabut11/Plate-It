@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Recipe | Plate-It!</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+      <div class="header-container">
+        <a href="index.html" class="logo-link">
+          <img src="images/FigmaLogo.png" alt="Plate-It Logo" class="top-logo">
+        </a>
+        <nav class="nav-center">
+          <a href="index.html">Home</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="about.html">About</a>
+        </nav> 
+        <div class="nav-buttons">
+          <a href="add.html" class="add-btn">Add Recipe</a>
+          <button class="surprise-btn" onclick="surpriseMe()">Surprise Me!</button>
+        </div>
+      </div>
+    </header>
+  <section class="add-recipe">
+    <h1>Share Your Recipe</h1>
+    <p>Got a family favorite or something new you discovered? Submit it below and inspire others!</p>
+
+    <form id="add-recipe-form" onsubmit="handleAddRecipe(event)">
+      <label>Recipe Title:</label>
+      <input type="text" id="new-title" required>
+
+      <label>Image URL:</label>
+      <input type="url" id="new-img" placeholder="https://example.com/food.jpg">
+
+      <label>Preparation Time:</label>
+      <input type="text" id="new-time" placeholder="e.g. 45 mins">
+
+      <label>Rating (★ to ★★★★★):</label>
+      <input type="text" id="new-rating" placeholder="★★★★☆">
+
+      <label>Ingredients (comma-separated):</label>
+      <textarea id="new-ingredients" rows="3"></textarea>
+
+      <label>Steps (comma-separated):</label>
+      <textarea id="new-steps" rows="3"></textarea>
+
+      <button type="submit" class="cta">Add Recipe</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Plate-It! | © 2025 Plate-It! | Facebook • Instagram • Twitter | Images belong to their rightful owners</p>
+  </footer>
+</body>
+</html>
